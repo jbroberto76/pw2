@@ -24,7 +24,6 @@ exportFilename: pw2_aula1_paradigmas
 # Agenda
 - *Design Patterns*
 - Abordagens de desenvolvimento
-- 
 
 ---
 layout: section
@@ -32,6 +31,8 @@ layout: section
 
 # *Design Patterns*
 
+---
+layout: quote
 ---
 
 > Design **patterns** provide proven solutions to common problems in software development.
@@ -54,50 +55,72 @@ Exemplos
 - Component-Based Architecture
 
 ---
+layout: quote
+---
 
 # MVC
 
-> The MVC pattern separates an application into three interconnected components: the Model, the View, and the Controller. The Model represents the data and business logic, the View handles the presentation and user interface, and the Controller acts as the intermediary between the Model and View
+> O padrão MVC separa uma aplicação em três componentes interconectados: Modelo, Visão e Controlador. O Modelo representa os dados e a lógica de negócio, a Visão lida com a apresentação ao usuário e o Controlador atua como intermediário entre Modelo e Visão
 
+---
+layout: quote
 ---
 
 # Flux Architecture
 
-> Flux is an application architecture pattern popularized by Facebook. It emphasizes unidirectional data flow and enforces strict separation of concerns between components: Actions, Stores, and Views.
+> Flux é um padrão de arquitetura de aplicações popularizada pelo Facebook (Meta). Enfatiza o fluxo de dados unidirecional força a separação estrita entre os componentes: ***Dispatchers*** (recebem ações que são disparadas aos *listeners*), ***Stores*** (armazenam dados que são modificados por *dispatchers*) e ***Views*** (Componentes React que escutam mudanças em *Stores* e chamam ações dos *dispatchers*).
 
+[Flux architecture cheatsheet](https://devhints.io/flux)
+
+---
+layout: quote
 ---
 
 # Dependency Injection
 
-> Dependency Injection (DI) is a design pattern that aims to manage component dependencies by injecting them from external sources rather than creating them within the component itself.
+> Dependency Injection é um padrão de projeto que busca gerenciar dependências de componentes injetando-os a partir de fontes externas ao invés de criá-las dentro do próprio componente.
 
+---
+layout: image-right
+image: https://media.geeksforgeeks.org/wp-content/uploads/20241108093235513015/dependency-injection-di-design-pattern-2.webp
+backgroundSize: contain
+---
+
+# Dependency Injection
+Objetivos
+- Aumentar a flexibilidade
+- Reduzir o acomplamento entre as classes
+- Aumentar a reutilização de código
+- Melhorar a manutenção e escalabilidade
+
+---
+layout: quote
 ---
 
 # Component Based
 
-> Component-Based Architecture emphasizes building applications by composing reusable UI components. It promotes encapsulation, modularity, and reusability.
+> Arquitetura baseada em componentes enfatiza a construção de aplicações pela composição de componentes de interface do usuário reutilizáveis. Estimula o encapsulamento, modularidade e a reutilização
 
 ---
 
 # Component Based
 Vantagens
-- Reusability: Components can be easily reused across different parts of the application
-- Encapsulation: Each component is responsible for its own state and behavior, enhancing code modularity and maintainability
-- Development efficiency: Teams can work on individual components simultaneously, promoting parallel development
+- **Reutilização** Os componentes podem ser facilmente reutilizados em diferentes partes da aplicação.
+- **Encapsulamento** Cada componente é responsável pelo seu próprio estado e comportamento, aumentando a modularidade e a facilidade de manutenção do código.
+- **Eficiência de desenvolvimento** As equipes podem trabalhar em componentes individuais simultaneamente, promovendo o desenvolvimento paralelo.
 
 ---
 
 # Component Based
 Desvantagens
-- Complexity with large projects: As the number of components grows, managing inter-component communication and dependencies can become challenging
-- Performance concerns: Improper component design or excessive rendering can impact performance
-- Learning curve: Developers need to learn how to design and compose components effectively
+- **Complexidade** em projetos grandes. À medida que o número de componentes aumenta, o gerenciamento da comunicação e das dependências pode ser desafiador.
+- Problemas de **desempenho**. O design inadequado de componentes ou a renderização excessiva podem afetar o desempenho.
 
 ---
 
 # *Component-Based Architecture*
 
-> Every modern frontend library recommends that developers build apps using component-based architecture. Browse any React, Angular, Vue, and Svelte apps to check the component-based architecture pattern
+> As bibliotecas modernas de *frontend* constroem apps utilizando a arquitetura baseada em componentes. React, Angular, Vue, Next e Svelte são exemplos de *frameworks* consagrados que utilizam dessa arquitetura. 
 
 ---
 layout: section
@@ -116,15 +139,14 @@ layout: section
 ---
 
 # Single Page Application (SPA)
-- Content is loaded via Javascript files for the entire application and housed within a single HTML page
-- The Javascript files house all the data relating to the application logic, UI, and communication with the server
-- A medida que o usuário realiza requisições a página vai sendo modificada sem necessidade de novas transferências de dados
+- O conteúdo é carregado por meio de arquivos Javascript para todo o aplicativo e hospedado em uma única página HTML
+- Os arquivos Javascript abrigam todos os dados relativos à lógica da aplicação, UI e comunicação com o servidor
+- À medida que o usuário realiza requisições a página vai sendo modificada sem necessidade de novas transferências de dados
 
 ---
 
 # Single Page Application (SPA)
 Vantagens
-
 - Experiência do usuário mais fluida e responsiva
 - Menor tempo de resposta após o carregamento inicial
 - Gerenciamento de estado mais complexo em grandes aplicações
@@ -133,7 +155,6 @@ Vantagens
 
 # Single Page Application (SPA)
 Desvantagens
-
 - Tempo de carregamento cresce com a complexidade da aplicação
 - Dificulta *Search Engine Optimization* (SEO)
 
@@ -141,8 +162,7 @@ Desvantagens
 
 # Single Page Application (SPA)
 Quando usar?
-
-- Dashboards e aplicações mais interativas
+- *Dashboards* e aplicações mais interativas
 - Evitar utilizar para aplicações que dependem de SEO, ou seja que possuem conteúdo intensivo
 
 ---
@@ -150,38 +170,36 @@ Quando usar?
 # Server-Side Rendering (SSR)
 
 - Os clientes recebem uma página já renderizada no servidor
-- A renderização ocorre no servidor antes de chgar no navegador, após consultas a bancos de dados, APIs, etc 
-- Alguns elementos podem ser armazenados em cache
+- A renderização ocorre no servidor antes de chegar ao navegador, após consultas a bancos de dados, APIs, etc 
+- Alguns elementos podem ser armazenados em *cache*
 
 ---
 
 # Server-Side Rendering (SSR)
 Vantagens
-
-- Changes to content are displayed instantaneously unlike SSGs where teams must rebuild the site to see the changes to the content
-- SSR enables teams to create dynamic, personalized content experiences without labor-intensive workarounds
+- As alterações de conteúdo são exibidas instantaneamente, diferentemente dos SSGs, em que as equipes precisam reconstruir o site para visualizar as mudanças no conteúdo.
+- O SSR permite que as equipes criem experiências de conteúdo dinâmicas e personalizadas sem soluções alternativas trabalhosas.
 - Facilita a classificação por motores de busca (SEO)
 
 ---
 
 # Server-Side Rendering (SSR)
 Desvantagens
-
-- SSRs typically require more API calls to the server
-- SSRs by default are often slower than SPAs and SSGs
+- Normalmente, SSR exige mais chamadas de API para o servidor
+- Por padrão, SSR costuma ser mais lento do que os SPAs e SSGs
 
 ---
 
 # Server-Side Rendering (SSR)
 Quando aplicar?
 
-> They are ideal for personalized experiences where live changes to the data can be viewed.Server-side rendered sites (or server-side rendered applications (SRAs)) are excellent choices for content that is time-sensitive and applications that rely on large amounts of user interaction
+> Ideais para experiências personalizadas em que as alterações dos dados podem ser vistas em tempo real. Aplicações SSR são opções excelentes para conteúdo sensível ao tempo e aplicações baseadas em interação intensiva. 
 
 ---
 
 # Static Site Generator (SSG)
-- generate content at the build time of new pages or when changes are made to the content
-- there is no need to load pages based on user requests
+- Geram conteúdo no momento da criação de novas páginas ou quando alterações são feitas no conteúdo
+- Não há necessidade de carregar páginas com base em solicitações do usuário
 
 --- 
 
@@ -255,7 +273,7 @@ layout: section
 # Abordagem Híbrida
 *Frameworks Modernos*
 
-> Frameworks como Next.js e React Router (antigo Remix) são frequentemente chamados de "híbridos" porque combinam o melhor dos dois mundos
+> *Frameworks* como Next.js e React Router (antigo Remix) são frequentemente chamados de "híbridos" porque combinam o melhor dos dois mundos
 
 ---
 
