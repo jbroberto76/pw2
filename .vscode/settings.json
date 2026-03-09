@@ -2,6 +2,7 @@
     "slidev.include": [
         "**/slides.md",
         "pw2_aula2_hello_react.md",
-        "pw2_aula3_react_elements.md"
+        "pw2_aula3_react_elements.md",
+        "pw2_aula4_ES6.md"
     ]
 }

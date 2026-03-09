@@ -37,13 +37,13 @@ layout: section
 layout: quote
 ---
 
-> React é uma biblioteca JS para a criação de interfaces de usuário web. Permite a criação de **componentes** reutilizáveis. React é usado essencialmente para criar *Single Page Applications* (SPA)
+> React é uma biblioteca JS para a criação de interfaces de usuário web que permite a criação de **componentes** reutilizáveis. React é usado originalmente para criação de *Single Page Applications* (SPA)
 
 ---
 layout: quote
 ---
 
-> React foi desenvolvido pelo Facebook (hoje Meta) pelo engenheiro Jordan Walke. Em 2011 como uma ferra
+> React foi desenvolvido no Facebook (hoje Meta) pelo engenheiro Jordan Walke. Em 2011 como uma ferra
 
 
 ---
@@ -76,10 +76,10 @@ layout: section
 - A web foi fundamentada em HTML (conteúdo), CSS (*design*) e lógica (JS), normalmente em arquivos separados
 - Com uma Internet mais interativa, a lógica passou a determinar cada vez mais o conteúdo
 - A ideia do React+JSX é manter lógica de renderização e marcação juntas
-- Como cada componente é uma função que retorna a marcação a ser renderizada no navegador
+- Cada componente é uma função que retorna a marcação a ser renderizada no navegador
 
 ---
-layout: image
+layout: image-right
 image: https://pt-br.react.dev/_next/image?url=%2Fimages%2Fdocs%2Fdiagrams%2Fwriting_jsx_form.dark.png&w=384&q=75
 backgroundSize: contain
 ---
@@ -90,10 +90,8 @@ backgroundSize: contain
 layout: two-cols-header
 ---
 
-# JSX
-Primeiras regras
-
-1. Retornar um único elemento raiz
+# Primeiras regras JSX
+Retornar um único elemento raiz
 
 :: left ::
 
@@ -123,10 +121,8 @@ export default function TodoList() {
 
 ---
 
-# JSX
-Primeiras regras
-
-2. Todas as *tags* explicitamente fechadas
+# Primeiras regras JSX
+Todas as *tags* explicitamente fechadas
 
 ```js
 <>
@@ -145,23 +141,19 @@ Primeiras regras
 
 ---
 
-# JSX
-Primeiras regras
-
-3. `camelCase`
+# Primeiras regras JSX
+`camelCase`
 
 > JSX se transforma em JavaScript e atributos escritos em JSX se tornam chaves de objetos JS. Porém, o JS tem limitações nos nomes das variáveis, por exemplo seus nomes não podem conter hífens ou ser palavras reservadas como `class`.
 
 ---
 
-# JSX
-Primeiras regras
-
-3. `camelCase`
+# Primeiras regras JSX
+`camelCase`
 
 > Por isso que, no React, muitos atributos HTML e SVG são escritos em `camelCase`. Por exemplo, em vez de `stroke-width`, utiliza-se `strokeWidth`. Como `class` é uma palavra reservada, no React escreve-se `className`
 
-```js
+```js {4}
 <img 
   src="https://i.imgur.com/yXOvdOSs.jpg" 
   alt="Hedy Lamarr" 
@@ -207,7 +199,7 @@ layout: section
     - Dependencies
     - Source code
 - ***Dependencies*** passam pelo processo chamado *pre-bundle* utilizando a linguagem Go (10-100x mais rápido do que JS)
-- O código fonte apenas é transformado sob demanda no navegador num processo chamado *native ESM* (*EcmaScript Module*)
+- O código fonte apenas é transformado sob demanda no navegador num processo chamado *Native ESM* (*EcmaScript Module*)
 
 ---
 layout: image
@@ -215,7 +207,6 @@ image: https://cdn.shopify.com/s/files/1/0779/4361/files/bundle_based_dev_server
 backgroundSize: contain
 ---
 
-# Bundling
 
 ---
 layout: image
@@ -223,7 +214,6 @@ image: https://cdn.shopify.com/s/files/1/0779/4361/files/native_ESM_based_dev_se
 backgroundSize: contain
 ---
 
-# Native ESM
 
 ---
 
@@ -314,11 +304,6 @@ Crie uma aplicação React utilizando o Vite no seu ambiente local.
 
 # 2
 Crie a mesma aplicação agora no serviço EC2 da AWS.
-
----
-
-# 3
-Busque um outro provedor de serviços de computação em nuvem para realizar operação similar ao exercício anterior.
 
 
 ---

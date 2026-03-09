@@ -1,6 +1,6 @@
 .slidev-layout {
     p, ul, ol {
-      font-size: 24px
+      font-size: 24px;
     }
   
     strong {
@@ -12,8 +12,16 @@
       padding-left: 1em;
       margin: 3em 0em;
     }
+
+    blockquote > p {
+      line-height: 1.25;
+    }
   }
 
   pre, code {
     --uno: select-text;
   }
+
+.slidev-code {
+  margin: 0rem 0.5rem;
+}

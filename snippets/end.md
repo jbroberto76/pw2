@@ -1,7 +1,6 @@
 ---
 layout: image
 transition: fade
-backgroundSize: contain
 image: /cover_down.svg
 ---
 
@@ -13,7 +12,7 @@ image: /cover_down.svg
 
 <carbon-logo-github class="inline-block"/> [jbroberto76](https://github.com/jbroberto76)<br>
 
-<carbon-logo-github class="inline-block"/> [pw1-repo](https://github.com/pw1-repo)
+<!-- <carbon-logo-github class="inline-block"/> [pw1-repo](https://github.com/pw2-repo) -->
 
 </p>
 
