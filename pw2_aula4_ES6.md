@@ -532,10 +532,7 @@ layout: fact
 ---
 
 # 1
-
----
-
-# 2
+Realizar o Quiz ES6 disponível na Aula 4 do Google Classroom.
 
 ---
 

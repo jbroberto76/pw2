@@ -48,7 +48,7 @@ layout: quote
 
 ---
 
-# React
+# React <logos-react />
 - Interfaces construídas a partir de pequenas partes reutilizáveis (componentes)
 - Permite ainda a criação de componentes personalizados
 - A combinação de componentes nativos e personalizados compõe a interface
@@ -181,14 +181,16 @@ layout: section
 - Gerenciador de pacotes (NPM, Yarn, PNPM, etc)
 - Ferramenta de montagem (*build tool*)
     - `create-react-app`
-    - webpack
-    - Rollup
-    - Parcel
-    - Vite
+    - webpack <logos-webpack />
+    - Rollup <logos-rollup />
+    - Parcel <logos-parcel-icon />
+    - Vite <logos-vitejs />
 
 ---
+layout: center
+---
 
-# Por que Vite?
+# Por que Vite? <logos-vitejs />
 
 > A quantidade de módulos JS para desenvolvimento de projetos cresce com a complexidade dos mesmos. Grandes projetos podem conter milhares de módulos podendo levar minutos para um servidor ficar disponível. Vite pretende solucionar essa questão.
 
@@ -274,13 +276,27 @@ backgroundSize: contain
 ---
 
 # Criando o Primeiro Projeto
-Estrutura de diretórios
+Estrutura de diretórios resumida
 
-- `/public` served directly to browsers without any processing (*as-is*)
+```plantuml
+@startfiles
+/public/
+/src/assets/
+/""index.html""
+/""vite.config.json""
+@endfiles
+```
+
+---
+
+# Criando o Primeiro Projeto
+Estrutura de diretórios resumida
+
+- `/public` Disponibilizado diretamente aos navegadores sem processamento (*as-is*)
 - `/src`
-    - `/assets` Assets here go through the build process, get optimized, and can be imported into your components
-- `index.html` The main HTML file for your application. Vite serves this file as the entry point and injects the necessary scripts and styles.
-- `vite.config.json` arquivo de configuração
+    - `/assets` Arquivos passam pelo processo de montagem (*build*), são otimizados e podem ser importados por componentes
+- `index.html` Arquivo HTML principal da aplicação. Vite serve esse arquivo como ponto de entrada e injeta os *scripts* e estilos demandados.
+- `vite.config.json` Arquivo de configuração do Vite
 
 ---
 layout: fact
