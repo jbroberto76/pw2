@@ -16,6 +16,10 @@
     blockquote > p {
       line-height: 1.25;
     }
+
+    /* a {
+      border: none;
+    } */
   }
 
   pre, code {

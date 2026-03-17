@@ -7,7 +7,7 @@ layout: image
 image: /cover.svg
 description: Programação Web 2
 author: José Roberto Bezerra
-title: Elementos de Apps React
+title: Elementos React
 exportFilename: pw2_aula3_react_elements
 ---
 
@@ -32,7 +32,7 @@ layout: section
 
 ---
 
-```js
+```js {*}{class: '!children:text-xs'}
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
@@ -76,7 +76,7 @@ export default App
 # Importando Recursos 
 `useState`
 
-```js
+```js {*|1,7}{class: '!children:text-xl'}
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
@@ -107,7 +107,7 @@ layout: quote
 
 - `/assets` recursos nesse diretório passam por otimização (*build*)
 
-```js
+```js {*}{class: '!children:text-xl'}
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
@@ -125,9 +125,8 @@ import './App.css'
 ---
 
 # Tag Única
-- Observar as linhas 10 e 31
 
-```js
+```js {10,31}{startLine: 9}
 return (
     <>
       <div>
@@ -162,10 +161,15 @@ return (
 - A cada clique o *event listener* associado ao botão é chamado(`setCount`)
 - `setCount` modifica o estado o que forçando que a página seja renderizada novamente com *state* atualizado
 
-```js {}
-<button onClick={() => setCount((count) => count + 1)}>
+```js {13}{startLine:11, class: '!children:text-lg'}
+<h1>Vite + React</h1>
+<div className="card">
+  <button onClick={() => setCount((count) => count + 1)}>
     count is {count}
-</button>
+  </button>
+  <p>
+    Edit <code>src/App.jsx</code> and save to test HMR
+  </p>
 ```
 
 ---
@@ -175,17 +179,17 @@ return (
 - Observar a última linha
 - Disponibiliza o componente de nome `App` para ser importado por `main.jsx` (responsável pela renderização)
 
-```js
+```js {*}{class: '!children:text-xl'}
 export default App
 ```
 
 ---
 
 # Modificando o Componente
-- Atualizar App.jsx como mostrado
-- Observar que a página é rendereizada logo após a modificação do arquivo
+- Atualizar `App.jsx` como mostrado
+- Observar que a página é renderizada logo após a modificação do arquivo
 
-```js
+```js {*}{class: '!children:text-xl', startLine: 6} 
 function App() {
   return (
     <div className="App">
@@ -209,14 +213,14 @@ layout: section
 `createRoot()`
 - A grande funcionalidade do React é renderizar HTML
 - A renderização acontece através do *container* `createRoot()`
-- Tipicamente, é estruturado como uma <div id="root"></div> no `index.html`
+- Tipicamente, é estruturado como uma `<div id="root"></div>` no `index.html`
 
 ---
 
 # `index.html`
 Observar linhas 10-11
 
-```html
+```html {|10,11}{class: '!children:text-xl'}
 <!doctype html>
 <html lang="en">
   <head>
@@ -236,7 +240,7 @@ Observar linhas 10-11
 
 # `main.jsx`
 
-```js
+```js {*}{class: '!children:text-xl'}
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
@@ -247,32 +251,58 @@ createRoot(document.getElementById('root')).render(
     <App />
   </StrictMode>,
 )
-
 ```
 
 ---
 
 # `main.jsx`
-`StrictMode`
+`<StrictMode>`
 - Ferramenta puramente de desenvolvimento
 - Destaca potenciais problemas no código
 - Fornece *warnings*, etc
+
+```js {1}{class: '!children:text-xl'}
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import './index.css'
+import App from './App.jsx'
+
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <App />
+  </StrictMode>,
+)
+```
 
 ---
 
 # `main.jsx`
 `createRoot()`
-- Encontra `<div id="root">` no `index.html`
+- Busca `<div id="root">` no `index.html`
 - A partir desse ponto a aplicação React é montada
 - A renderização é efetivamente realizada por `.render(<App />)`
+
+```js {6}{class: '!children:text-lg'}
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import './index.css'
+import App from './App.jsx'
+
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <App />
+  </StrictMode>,
+)
+```
 
 ---
 
 # `render()`
+Conteúdo estático
 - Define o que deve ser renderizado no *container* HTML
 - Outro exemplo de `main.jsx`
 
-```js
+```js {*}{class: '!children:text-lg'}
 import { createRoot } from 'react-dom/client'
 
 createRoot(document.getElementById('root')).render(
@@ -285,7 +315,7 @@ createRoot(document.getElementById('root')).render(
 # `render()`
 Exemplo
 
-```js
+```js {*}{class: '!children:text-sm'}
 import { createRoot } from 'react-dom/client'
 
 const myelement = (
@@ -318,12 +348,13 @@ layout: two-cols-header
 
 ### `index.html`
 
-```js
+```js {*|4}{class: '!children:text-sm'}
 <!doctype html>
 <html lang="en">
   <body>
     <header id="sandy"></header>
-    <script type="module" src="/src/main.jsx"></script>
+    <script type="module" 
+    src="/src/main.jsx"></script>
   </body>
 </html>
 ```
@@ -332,12 +363,26 @@ layout: two-cols-header
 
 ### `main.jsx`
 
-```js
+```js {*|3}{class: '!children:text-sm'}
 import { createRoot } from 'react-dom/client'
 
 createRoot(document.getElementById('sandy')).render(
   <p>Welcome!</p>
 ) 
+```
+
+---
+layout: center
+---
+
+```plantuml {scale:2}
+@startuml
+hide footbox
+index.html -> main.jsx : ""<script />""
+main.jsx -> App.jsx : ""import""
+App.jsx -> main.jsx : ""createRoot.render()""
+main.jsx -> index.html : Rendering
+@enduml
 ```
 
 ---
@@ -350,7 +395,7 @@ layout: fact
 layout: fact
 ---
 
-# Exercícios
+# Exercício
 
 ---
 
@@ -359,15 +404,11 @@ Crie uma aplicação React utilizando o Vite no seu ambiente local. Deixe a apli
 
 ---
 
-# 2
-Repita o procedimento da questão anterior utilizando o provedor de serviços de nuvem Digital Ocean.
-
----
-
 # Referências
 
 - [React Tutorial W3Schools](https://www.w3schools.com/react/default.asp)
 - [React](https://react.dev/)
+- [Deploy on Vercel](https://medium.com/@a1guy/deploying-react-apps-with-vercel-step-by-step-from-github-to-live-c6662b42622c)
 
 ---
 src: /snippets/end.md
