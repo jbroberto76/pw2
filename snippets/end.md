@@ -12,7 +12,7 @@ image: /cover_down.svg
 
 <carbon-logo-github class="inline-block"/> [jbroberto76](https://github.com/jbroberto76)<br>
 
-<!-- <carbon-logo-github class="inline-block"/> [pw1-repo](https://github.com/pw2-repo) -->
+<carbon-logo-github class="inline-block"/> [pw2-repo](https://github.com/pw2-repo)
 
 </p>
 

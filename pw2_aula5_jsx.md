@@ -630,7 +630,7 @@ layout: fact
 ---
 
 # 1
-Realizar o Quiz 
+Realizar o Quiz JSX disponível na Aula 5 do Google Classroom.
 
 
 ---
