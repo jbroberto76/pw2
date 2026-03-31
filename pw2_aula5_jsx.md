@@ -228,7 +228,7 @@ function Car() {
 
 # Expressões JSX
 
-> JSX permite incorporar **qualquer expressão JavaScript válida** dentro da marcação.
+> JSX permite incorporar qualquer expressão JavaScript válida dentro da marcação.
 
 - Envolva expressões em chaves `{ }`
 - O React avalia a expressão e renderiza o resultado
@@ -430,7 +430,6 @@ function Car() {
   );
 }
 ```
-
 - Objeto com propriedades CSS em camelCase
 - `fontSize` em vez de `font-size`, `backgroundColor` em vez de `background-color`
 
