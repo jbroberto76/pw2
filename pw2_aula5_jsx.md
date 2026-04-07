@@ -11,8 +11,13 @@ title: Introdução JSX
 exportFilename: pw2_aula5_jsx
 ---
 
-# JSX
-JavaScript XML for React
+# {{ $slidev.configs.title }}
+{{ $slidev.configs.description }}
+
+---
+
+# Objetivo de Aprendizagem
+- Introduzir o JSX
 
 ---
 
