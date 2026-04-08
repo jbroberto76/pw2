@@ -17,7 +17,8 @@ exportFilename: pw2_aula6_componentes
 ---
 
 # Objetivo de Aprendizagem
-- Conhecer, criar e utilizar componentes React
+- Conhecer métricas de desempenho de aplicações web
+- Utilizar o Locust
 
 ---
 
@@ -61,7 +62,6 @@ Métricas Típicas
 # Performance
 Métricas Típicas
 
-
 # Percentis
 
 | Percentil | Significado | Por que usar |
@@ -73,12 +73,11 @@ Métricas Típicas
 
 ---
 
-
 # Métricas Aceitáveis
 
-- $p95 < 300ms $
-- $p99 < 800ms $
-- $Taxa de erro < 0,1%$
+- $$p95 < 300ms$$
+- $$p99 < 800ms$$
+- $$Taxa de erro < 0,1 \%$$
 - *Throughput* mínimo de 500 RPS sob carga de 1000 usuários virtuais 
 
 ---
@@ -172,10 +171,6 @@ backgroundSize: contain
 7. Inicie o teste (Start)
 
 ---
-
-
-
----
 layout: fact
 ---
 
@@ -190,6 +185,8 @@ layout: fact
 ---
 
 # 1
+
+> Implantar um site de teste utilizando uma das plataformas de nuvem abordadas (AWS, Digital Ocean ou Next). Criar um cenário de testes com Locust. Incrementar a quantidade de usuários para tentar encontrar o gargalo (limite) de usuários. O que acontece com o tempo de resposta? Com a quantidade de requisições por segundo? Qual o tempo médio de acesso dos usuários? Qual o maior tempo? Qual o menor?
 
 ---
 
