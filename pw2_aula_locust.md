@@ -8,7 +8,7 @@ image: /cover.svg
 description: Programação Web 2
 author: José Roberto Bezerra
 title: Locust
-exportFilename: pw2_aula6_componentes
+exportFilename: pw2_aula_locust
 ---
 
 # {{ $slidev.configs.title }}
