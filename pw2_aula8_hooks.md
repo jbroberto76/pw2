@@ -57,7 +57,6 @@ Tipos
 - Ref hooks
 - Effect hooks
 - Performance hooks
-- Custom
 
 ---
 
